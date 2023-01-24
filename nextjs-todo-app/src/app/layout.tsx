@@ -10,14 +10,13 @@ export default function RootLayout({
         <head /> will contain the components returned by the nearest parent
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
-      <head />
-      <body className="min-h-screen grid place-content-center pla">
-        {/* <div className= "bg-teal-500 w-100 h-100"> */}
-          {/* <h1 className="text-3xl text-center font-bold text-amber-300">Todo Application</h1> */}
-          <span className="shadow-lg shadow-amber-600/50 before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-amber-500 relative inline-block text-center">
-            <span className="relative text-white text-2xl font-bold">Todo Application</span>
+      <head/>
+      <body className="border-cyan-300 place-content-center content-center bg-amber-200">
+          <div className="fixed top-10 left-[46%] grid place-content-center pla">
+          <span className="shadow-lg shadow-amber-600/50 before:block before:absolute before:-inset-1 before:-skew-y-2 before:bg-amber-500 relative inline-block text-center">
+            <span className="font-mono relative text-white text-2xl font-bold font-serif"><h1>Todo Application</h1></span>
           </span>
-        {/* </div> */}
+          </div>
         <br/>
         {children}
       </body>
