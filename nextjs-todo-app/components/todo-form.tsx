@@ -1,10 +1,22 @@
 
+interface TodoFormProps {
+  onAddTodo: (todoText:string) => void;
+}
+//export default function TodoForm
+const TodoForm: React.FunctionComponent<TodoFormProps> = ({onAddTodo}) => {
+    // const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    //   e.preventDefault()
+    //   onAddTodo(e.target.elements.todo.value)
+    //   e.target.elements.todo.value = ''
+    // }
 
-export default function TodoForm({ onAddTodo }) {
-    const handleSubmit = (e) => {
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault()
-      onAddTodo(e.target.elements.todo.value)
-      e.target.elements.todo.value = ''
+      const input = e.currentTarget.querySelector("input[name='todo']")as HTMLInputElement;
+      if(input){
+        onAddTodo(input.value)
+        input.value = ""
+      }
     }
   
     return (
@@ -17,3 +29,5 @@ export default function TodoForm({ onAddTodo }) {
      
     )
   }
+
+  export default TodoForm

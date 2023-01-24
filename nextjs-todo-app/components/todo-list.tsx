@@ -1,5 +1,9 @@
 //  import styles from '../styles/todolist.module.css';
-export default function TodoList({ todos, onDeleteTodo }) {
+interface TodoListProps {
+  todos: string[];
+  onDeleteTodo: (todoText:number) => void;
+}
+const TodoList:React.FunctionComponent<TodoListProps> = ({ todos, onDeleteTodo }) => {
   return (
     <div>
       <ul role="list" className="fixed top-[37%] left-[46%] right-[40%] grid place-content-center pla group divide-y divide-slate-200">
@@ -16,3 +20,4 @@ export default function TodoList({ todos, onDeleteTodo }) {
     
   )
 }
+export default TodoList;
