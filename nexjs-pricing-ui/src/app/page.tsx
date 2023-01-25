@@ -1,10 +1,14 @@
-
+import Header from "@/components/header"
+import Pricing from "@/components/pricing"
+import Features from "@/components/feature"
 export default function Home() {
   return (
-    <main>
-      <div>
-        <h1>Chakra UI</h1>
-      </div>
-    </main>
+   <div style={{"textAlign":"center"}}>
+<Header/>
+<Pricing/>
+<Features />
+   </div>
+    
+   
   )
 }
