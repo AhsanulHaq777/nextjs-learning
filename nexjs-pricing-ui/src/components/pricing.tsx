@@ -6,22 +6,23 @@ import CheckIcon from "@/icons/icon"
 export const ListItem = (props: StackProps) => {
     const {children, ...rest} = props;
     return(
-        <HStack as='li' spacing='20px' {...rest}>
+        <HStack as='li' spacing='20px' {...rest} alignItems='start'>
             <Icon as={CheckIcon} w='22px' h='22px' />
-            <Text>{children}</Text>
+            <Text textAlign={['left','left','center']}>{children}</Text>
         </HStack>
     )
 }
 
 export default function Pricing(){
     return(
-        <Box maxWidth='994px' margin='auto' mt='-256px' overflow='hidden' borderRadius='12px' boxShadow='0px 20px 25px -5px rgba(0, 0, 0, 0.1), 0px 10px 10px -5px rgba(0, 0, 0, 0.04)'>
-            <Flex>
+        <Box mx='6'>
+            <Box maxWidth='994px' margin='auto' mt='-256px' overflow='hidden' borderRadius='12px' boxShadow='0px 20px 25px -5px rgba(0, 0, 0, 0.1), 0px 10px 10px -5px rgba(0, 0, 0, 0.04)'>
+            <Flex direction={['column','column','row']}>
                 <Box bg='#F0EAFB' p='60px'>
                     <Text fontWeight='800' fontSize='24px'>Premium PRO</Text>
-                    <Heading as='h3' fontSize='60px' mt='16px'>$329</Heading>
+                    <Heading as='h3' fontSize={['48px','48px','60px']} mt='16px'>$329</Heading>
                     <Text fontWeight='500' fontSize='18px' mt='8px' color='#171923'>billed just once</Text>
-                    <Button fontWeight='700' fontSize='16px' bg='#805AD5' size='lg' borderRadius='8px' w='282px' color='#F7FAFC' mt='24px'>Get Started</Button>
+                    <Button fontWeight='700' fontSize='16px' bg='#805AD5' size='lg' borderRadius='8px' w='282px' color='#F7FAFC' mt={['32px','32px','24px']}>Get Started</Button>
                 </Box>
                 <Box p='60px' fontSize='18px' bg='white'>
                     <Text fontWeight='400' fontSize='18px' textAlign='left'>
@@ -36,5 +37,7 @@ export default function Pricing(){
                 </Box>
             </Flex>
         </Box>
+        </Box>
+        
     )
 }
