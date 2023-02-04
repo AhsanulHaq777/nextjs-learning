@@ -1,43 +1,3 @@
-// "use client";
-// import React from "react"
-// import { Image, Flex, Button,  HStack , chakra, Link } from '@chakra-ui/react'
-// import Logo from '../images/99120681.jpeg';
-// // import {Link} from 'react-scroll'
-// import data from './header.data';
-
-
-// const CTA = "Get Started"
-// export default function Header() {
-//   return (
-//     <chakra.header id="header">
-//       <Flex
-//         w="100%"
-//         px="6"
-//         py="5"
-//         align="center"
-//         justify="space-between"
-//       >
-//         <Image src={Logo.src} h="50px" />
-        
-//         <HStack as="nav" spacing="5">
-            
-//               <Button variant="nav"> Home </Button>
-//               <Button variant="nav"> About </Button>
-//               <Button variant="nav"> Cources </Button>
-//               <Button variant="nav"> Contact </Button>
-    
-//         </HStack>
-//         <HStack>
-//           <Button>
-//             {CTA}
-//           </Button>
-//         </HStack>
-        
-//       </Flex>
-//     </chakra.header>
-//   );
-// }
-
 "use client";
 import { useState } from 'react'
 import {
@@ -51,7 +11,7 @@ import {
 } from '@chakra-ui/react'
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
 import NextLink from 'next/link'
-import Logo from '../images/99120681.jpeg';
+import Logo from '../../public/images/logo.jpeg'
 
 
  const Header = () => {
@@ -92,7 +52,7 @@ import Logo from '../images/99120681.jpeg';
                
               variant="outline"
               aria-label="Home"
-              my={5}
+              m={5}
               w="100%"
             >
               Home
@@ -104,7 +64,7 @@ import Logo from '../images/99120681.jpeg';
                
               variant="outline"
               aria-label="About"
-              my={5}
+              m={5}
               w="100%"
             >
               About
@@ -116,7 +76,7 @@ import Logo from '../images/99120681.jpeg';
                
               variant="outline"
               aria-label="Contact"
-              my={5}
+              m={5}
               w="100%"
             >
               Contact

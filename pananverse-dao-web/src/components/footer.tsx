@@ -12,7 +12,7 @@ import {
   } from '@chakra-ui/react';
   import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
   import { ReactNode } from 'react';
-  import Logo from '../images/99120681.jpeg';
+  import Logo from '../../public/images/logo.jpeg'
   
  
   
@@ -59,8 +59,8 @@ import {
           spacing={4}
           justify={'center'}
           align={'center'}>
-          <Image  src={Logo.src} h="100px"
-               />
+          <Image  src={Logo.src} h="100px" />
+               
           <Stack direction={'row'} spacing={6}>
             <Link href={'#'}>Home</Link>
             <Link href={'#'}>About</Link>
