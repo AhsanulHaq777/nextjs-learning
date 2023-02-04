@@ -1,4 +1,5 @@
-
+"use client"
+import ChakraWrapper from "@/components/chakraWrapper"
 export default function RootLayout({
   children,
 }: {
@@ -7,7 +8,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head />
-      <body>{children}</body>
+      <body><ChakraWrapper>{children}</ChakraWrapper></body>
     </html>
   )
 }

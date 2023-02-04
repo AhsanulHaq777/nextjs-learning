@@ -1,8 +1,13 @@
 
+import Header from '../components/header'
+import Footer from '../components/footer'
+import MainPage from '../app/home'
 export default function Home() {
   return (
     <div>
-      <h1>Panaverse Dao</h1>
+      <Header />
+      <MainPage />
+      <Footer />
     </div>
   )
 }
